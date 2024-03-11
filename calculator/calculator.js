@@ -29,7 +29,7 @@ export function calculate(operator, firstNumber, secondNumber) {
     case "sq":
       // Even if caller passes in an argument for `secondNumber`, it's effectively ignored.
       return firstNumber * firstNumber;
-    default:
-      throw new Error(`Unsupported operator ${operator}`);
+    // default:
+    //   throw new Error(`Unsupported operator ${operator}`);
   }
 }
