@@ -1,12 +1,9 @@
-import { sum } from "/sum.js";
-import { expect, test } from "vitest";
+import { sum } from "/sum.js"; //  imports the `sum` function from sum.js
+import { expect, test } from "vitest"; //  imports `test` and `expect` functions from Vitest
 
-//  import `test` and `expect` functions from Vitest ✅
-//  import the `sum` function from sum.js
-//  create a bare bones test
-test("bare bones test should pass", () => {});
-
-//  run Vitest to check that it detects and passes the new test
 //  inside the test:
 //      call the sum function with arguments: 5 and 7
 //      assert that the value returned is 12
+test("given 5 and 7, should return 12", () => {
+  expect(sum(5, 7)).toBe(12);
+});
