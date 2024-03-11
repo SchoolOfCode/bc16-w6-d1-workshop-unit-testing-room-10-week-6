@@ -76,22 +76,11 @@ test("10 sq 5 is 100", () => {
   expect(actual).toBe(expected);
 });
 
-// test % operator (UNSUPPORTED OPERATOR TEST)
-// test("10 % 5 is 100", () => {
-//   //arrange
-//   const operator = "%";
-//   const first = 10;
-//   const second = 5;
-//   const expected = /^Unsupported operator %$/;
+/*We expect the calculate function to throw an error with a message that matches the regular expression /^Unsupported operator %$/.
+If the calculate function throws an error with the expected message, the test case passes; otherwise, it fails.*/
 
-//   //act
-//   const actual = calculate(operator, first, second);
-
-//   // assert
-//   expect(() => calculate(operator, first, second)).toThrowError(expected);
-// });
-
-test("operator error", () => {
-  const err = new Error(`Unsupported operator %`);
-  assert.ifError(err); // Rethrows err!
+test("% 124 by 56 should throw an error", () => {
+  expect(() => calculate("%", 124, 56)).toThrowError(
+    /^Unsupported operator %$/
+  );
 });
